@@ -13,13 +13,6 @@ script:
 after_success:
 - pip install python-coveralls && coveralls
 deploy:
-- provider: pypi
-  user: "jeziellago"
-  password:
-    secure: $REPO_KEY
-    tags: true
-    repo: jeziellago/autokeras
-
 - provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
